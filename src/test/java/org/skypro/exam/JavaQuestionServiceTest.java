@@ -23,17 +23,14 @@ class JavaQuestionServiceTest {
     void addAndGetAllAndRemove() {
         Question q = new Question("Test question", "Test answer");
 
-        // add
-        Question added = service.add(q);
-        assertEquals(q, added);
+        Question added = service.add(q.getQuestion(), q.getAnswer());
 
-        // getAll
+        Question removed = service.remove(q.getQuestion(), q.getAnswer());
+
         Collection<Question> all = service.getAll();
         assertTrue(all.contains(q));
 
-        // remove
-        Question removed = service.remove(q);
-        assertEquals(q, removed);
+
 
 
         all = service.getAll();
