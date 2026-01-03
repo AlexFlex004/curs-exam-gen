@@ -10,4 +10,5 @@ public class ExamGeneratorApplication {
 		SpringApplication.run(ExamGeneratorApplication.class, args);
 	}
 
+
 }
