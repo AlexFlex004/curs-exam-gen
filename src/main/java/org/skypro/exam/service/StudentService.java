@@ -14,6 +14,7 @@ public class StudentService {
 
     @Autowired
     public StudentService(StudentRepository studentRepository) {
+
         this.studentRepository = studentRepository;
     }
 
@@ -36,4 +37,17 @@ public class StudentService {
     public List<Student> getStudentsByAgeBetween(int min, int max) {
         return studentRepository.getStudentsByAgeBetween(11, 18);
     }
+
+    public Long getStudentsCount() {
+        return studentRepository.getStudentsCount();
+    }
+
+    public Double getAverageAge() {
+        return studentRepository.getAverageAge();
+    }
+
+    public List<Student> getLastFiveStudents() {
+        return studentRepository.getLastFiveStudents();
+    }
+
 }
