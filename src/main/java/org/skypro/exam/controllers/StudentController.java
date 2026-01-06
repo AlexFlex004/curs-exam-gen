@@ -16,6 +16,8 @@ public class StudentController {
 
     @Autowired
     public StudentController(StudentService studentService) {
+
+
         this.studentService = studentService;
     }
 
@@ -37,6 +39,24 @@ public class StudentController {
         return studentService.getStudentById(id)
                 .map(Student::getFaculty)
                 .orElse(null);
+    }
+
+
+    @GetMapping("/count")
+    public Long getStudentsCount() {
+        return studentService.getStudentsCount();
+    }
+
+
+    @GetMapping("/average-age")
+    public Double getAverageAge() {
+        return studentService.getAverageAge();
+    }
+
+
+    @GetMapping("/last")
+    public List<Student> getLastFiveStudents() {
+        return studentService.getLastFiveStudents();
     }
 
 }
