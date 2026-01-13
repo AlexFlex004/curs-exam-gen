@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/changes/lesson-three-student-index.yml
+
+  - include:
+      file: liquibase/changes/lesson-three-faculty-index.yml
