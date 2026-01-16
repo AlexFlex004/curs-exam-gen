@@ -10,4 +10,4 @@ databaseChangeLog:
               - column:
                   name: name
               - column:
-                  name: faculty
+                  name: faculty_id

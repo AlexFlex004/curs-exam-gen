@@ -4,7 +4,7 @@ databaseChangeLog:
       author: student
       changes:
         - createTable:
-            tableName: faculty
+            tableName: faculty_id
             columns:
               - column:
                   name: id

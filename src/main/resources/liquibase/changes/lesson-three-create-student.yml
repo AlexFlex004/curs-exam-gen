@@ -24,7 +24,7 @@ databaseChangeLog:
                     nullable: false
 
               - column:
-                  name: faculty
-                  type: VARCHAR(255)
+                  name: faculty_id
+                  type: BIGINT
                   constraints:
                     nullable: false
