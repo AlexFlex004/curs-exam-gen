@@ -2,6 +2,8 @@ package org.skypro.exam.service;
 
 import org.skypro.exam.model.Student;
 import org.skypro.exam.repository.StudentRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,10 @@ import java.util.Optional;
 @Service
 public class StudentService {
     private final StudentRepository studentRepository;
+
+    private static final Logger logger =
+            LoggerFactory.getLogger(StudentService.class);
+
 
     @Autowired
     public StudentService(StudentRepository studentRepository) {

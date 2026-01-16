@@ -1,10 +1,6 @@
 package org.skypro.exam.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Lob;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Avatar {
@@ -18,6 +14,7 @@ public class Avatar {
     private String mediaType;
 
     @Lob
+    @Column(columnDefinition = "bytea")
     private byte[] data;
 
 

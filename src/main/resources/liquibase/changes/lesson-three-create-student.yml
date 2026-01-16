@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-student-table
+      author: student
+      changes:
+        - createTable:
+            tableName: student
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+
+              - column:
+                  name: age
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: faculty
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false

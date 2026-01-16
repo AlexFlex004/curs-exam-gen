@@ -1,11 +1,13 @@
 databaseChangeLog:
   - changeSet:
-      id: add-student-name-index
+      id: add-student-name-faculty-index
       author: student
       changes:
         - createIndex:
-            indexName: idx_student_name
+            indexName: idx_student_name_faculty
             tableName: student
             columns:
               - column:
                   name: name
+              - column:
+                  name: faculty
