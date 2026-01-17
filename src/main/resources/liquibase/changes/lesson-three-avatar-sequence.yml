@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-avatar-sequence
+      author: avatar
+      changes:
+        - createSequence:
+            sequenceName: avatar_sequence
+            startValue: 1
+            incrementBy: 1

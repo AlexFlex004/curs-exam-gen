@@ -1,16 +1,25 @@
 databaseChangeLog:
 
   - include:
+      file: classpath:liquibase/changes/lesson-three-student-sequence.yml
+
+  - include:
       file: classpath:liquibase/changes/lesson-three-create-student.yml
 
   - include:
       file: classpath:liquibase/changes/lesson-three-student-index.yml
 
   - include:
+      file: classpath:liquibase/changes/lesson-three-faculty-sequence.yml
+
+  - include:
       file: classpath:liquibase/changes/lesson-three-create-faculty.yml
 
   - include:
       file: classpath:liquibase/changes/lesson-three-faculty-index.yml
+
+  - include:
+      file: classpath:liquibase/changes/lesson-three-avatar-sequence.yml
 
   - include:
       file: classpath:liquibase/changes/lesson-three-create-avatar.yml

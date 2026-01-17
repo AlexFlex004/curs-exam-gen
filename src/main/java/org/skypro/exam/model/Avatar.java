@@ -7,6 +7,17 @@ public class Avatar {
 
     @Id
 
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "avatar_seq"
+    )
+    @SequenceGenerator(
+            name = "avatar_seq",
+            sequenceName = "avatar_sequence",
+            allocationSize = 1
+    )
+
+
     private Long id;
 
     private String filePath;

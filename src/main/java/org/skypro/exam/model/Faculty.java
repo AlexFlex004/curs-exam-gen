@@ -1,9 +1,6 @@
 package org.skypro.exam.model;
+import jakarta.persistence.*;
 import lombok.*;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
@@ -14,6 +11,16 @@ import java.util.List;
 @AllArgsConstructor
 public class Faculty {
     @Id
+
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "faculty_seq"
+    )
+    @SequenceGenerator(
+            name = "faculty_seq",
+            sequenceName = "faculty_sequence",
+            allocationSize = 1
+    )
 
     private Long id;
     private String name;

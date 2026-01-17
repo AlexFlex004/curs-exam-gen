@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-faculty-sequence
+      author: faculty
+      changes:
+        - createSequence:
+            sequenceName: faculty_sequence
+            startValue: 1
+            incrementBy: 1
