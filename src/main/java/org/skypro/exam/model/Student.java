@@ -10,7 +10,17 @@ import jakarta.persistence.*;
 @AllArgsConstructor
 public class Student {
     @Id
-    @GeneratedValue
+
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_seq"
+    )
+    @SequenceGenerator(
+            name = "student_seq",
+            sequenceName = "student_sequence",
+            allocationSize = 1
+    )
+
     private Long id;
     private String name;
     private int age;

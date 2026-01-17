@@ -9,5 +9,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AvatarRepository extends JpaRepository<Avatar, Long> {
 
-    Page<Avatar> findAll(SpringDataWebProperties.Pageable pageable);
 }
