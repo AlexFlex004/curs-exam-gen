@@ -5,7 +5,7 @@ databaseChangeLog:
       changes:
         - createIndex:
             indexName: idx_faculty_name_color
-            tableName: faculty_id
+            tableName: faculty
             columns:
               - column:
                   name: name

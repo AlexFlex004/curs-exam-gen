@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Faculty {
     @Id
-    @GeneratedValue
+
     private Long id;
     private String name;
     private String color;
